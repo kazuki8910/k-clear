@@ -19,6 +19,7 @@
 # 一般モジュール
 import pandas as pd
 import re
+import pytz
 from datetime import datetime as dt
 
 # スプシ関連
@@ -89,7 +90,7 @@ for this_key in key_list:
 
     # タイムスタンプ
     cell = ws_to.range(1,1,1,1)
-    cell[0].value = str(dt.today())
+    cell[0].value = str(dt.now(pytz.timezone('Asia/Tokyo')))
     ws_to.update_cells(cell)
     
     print(asp_name)
@@ -154,7 +155,7 @@ for this_key in key_list:
 
     # タイムスタンプ
     cell = ws_to.range(1,1,1,1)
-    cell[0].value = str(dt.today())
+    cell[0].value = str(dt.now(pytz.timezone('Asia/Tokyo')))
     ws_to.update_cells(cell)
     
     print(asp_name)
