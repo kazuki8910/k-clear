@@ -53,7 +53,10 @@ key_list = [
     ["アレテコ 成果 5月", "1h-eKxkFgKjbtU4zSZ27w_qX5xB2I43to0wyFmNXQ_x0"],
     ["ブリーチ 成果 5月", "1dlyj0kda6GpvNWLCpHPEU1h0kkMGSvE9798uVz_ibfk"],
     ["FA 成果 5月", "1f6DAv8sFpUio8ougLu4Sm_exrJV9D_0kF75dUbKqqEo"],
-    ["クラン 成果 5月", "1yyNXq88-XQROgeQdt6LtEy5UretavethE1Q-mqgk_sQ"]
+    ["クラン 成果 5月", "1yyNXq88-XQROgeQdt6LtEy5UretavethE1Q-mqgk_sQ"],
+    ["YouTuber 成果 5月", "1QTyMDuGh9Z59kxYU4jO8Oahofq7EyJSUoj8dk_tT0-E"],
+    ["h1 成果 5月", "1pGgPvqZc2WSnUw0ZCcQHGvI8xciumtVopoYYaYzUhFY"],
+    ["h3 成果 5月", "1yNs3crJD4-HlSG7bhpv0SQGlXncPZPOxmpb3jR4BSCg"]
 ]
 
 # シート名
