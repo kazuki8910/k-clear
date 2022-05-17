@@ -54,6 +54,7 @@ key_list = [
     ["ブリーチ 成果 5月", "1dlyj0kda6GpvNWLCpHPEU1h0kkMGSvE9798uVz_ibfk"],
     ["FA 成果 5月", "1f6DAv8sFpUio8ougLu4Sm_exrJV9D_0kF75dUbKqqEo"],
     ["クラン 成果 5月", "1yyNXq88-XQROgeQdt6LtEy5UretavethE1Q-mqgk_sQ"],
+    ["クリエイト 成果 5月", "19aeLHkG6XxNKRQZD1yFnlRMtesdVWhjvKcEEB2xQJAk"],
     ["YouTuber 成果 5月", "1QTyMDuGh9Z59kxYU4jO8Oahofq7EyJSUoj8dk_tT0-E"],
     ["h1 成果 5月", "1pGgPvqZc2WSnUw0ZCcQHGvI8xciumtVopoYYaYzUhFY"],
     ["h3 成果 5月", "1yNs3crJD4-HlSG7bhpv0SQGlXncPZPOxmpb3jR4BSCg"]
@@ -103,7 +104,7 @@ print("成果確認シート 完了")
 
 ########################
 # 
-# 成果確認シートの集客表タブ更新
+# ROAS管理シートの集客表タブ更新
 # 
 ########################
 
