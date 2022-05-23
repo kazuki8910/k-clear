@@ -17,6 +17,7 @@
 import pandas as pd
 import re
 import pytz
+import sys
 from datetime import datetime as dt
 
 # スプシ関連
@@ -29,6 +30,79 @@ import conf
 print("モジュールのインポート完了")
 
 
+
+########################
+# 
+# 設定
+# 
+########################
+
+# シートキー
+key_02 = "1WORdOLMmZU-7xyEhtZUJbjwyKe_q1Ye47E30xSA4ZS4"
+# シート名
+name_02 = "22年5月"
+
+# 成果シートを更新するループの関数
+def update_sheet(key_list, name_to, df_origin):
+    for this_key in key_list:
+        i=0
+        while True:
+            i=i+1
+            if(i>10):
+                sys.exit()
+
+            try:
+                asp_name = this_key[0]
+                key_to = this_key[1]
+
+                # ROAS管理シートにアクセス
+                wb_to = func.connect_gspread(key_to)
+                ws_to = wb_to.worksheet(name_to)
+
+                # まとめデータを貼り付け
+                set_with_dataframe(ws_to, df_origin)
+
+                # タイムスタンプ
+                cell = ws_to.range(1,1,1,1)
+                cell[0].value = str(dt.now(pytz.timezone('Asia/Tokyo')))
+                ws_to.update_cells(cell)
+                
+                print(asp_name)
+                break
+
+            except:
+                print(asp_name + "更新失敗")
+
+
+
+########################
+# 
+# 成果更新シートのまとめデータ更新
+# 
+########################
+
+key_list = [
+    ["成果更新シート", "1mrktRFIhx9ASA7nyVVsecAuUMNxRPKV0d54SNxDSImM"]
+]
+
+name_to = "まとめデータ"
+
+
+# 集客表元データのシートにアクセス
+wb_origin = func.connect_gspread(key_02)
+ws_origin = wb_origin.worksheet(name_02)
+
+# 元データ取得
+df_origin = pd.DataFrame(ws_origin.get_all_values()) # 元データ取得
+df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
+
+# ループにする
+update_sheet(key_list, name_to, df_origin)
+
+
+print("成果更新シート 完了")
+
+
 # In[3]:
 
 
@@ -37,9 +111,6 @@ print("モジュールのインポート完了")
 # 成果確認シートの集客表タブ更新
 # 
 ########################
-
-# シートキー
-key_02 = "1WORdOLMmZU-7xyEhtZUJbjwyKe_q1Ye47E30xSA4ZS4"
 
 key_list = [
     ["フォースリー 成果 5月", "15Jn-q4G5060iDOII7EW8_zhDdWfwFHB3oWwQRMfanqs"],
@@ -61,7 +132,6 @@ key_list = [
 ]
 
 # シート名
-name_02 = "22年5月"
 name_to = "まとめデータ_22年5月"
 
 
@@ -73,28 +143,9 @@ ws_origin = wb_origin.worksheet(name_02)
 df_origin = pd.DataFrame(ws_origin.get_all_values()) # 元データ取得
 df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
 
-# コピー先にアクセス
-wb_origin = func.connect_gspread(key_02)
-ws_origin = wb_origin.worksheet(name_02)
 
 # ループにする
-for this_key in key_list:
-    asp_name = this_key[0]
-    key_to = this_key[1]
-
-    # ROAS管理シートにアクセス
-    wb_to = func.connect_gspread(key_to)
-    ws_to = wb_to.worksheet(name_to)
-
-    # まとめデータを貼り付け
-    set_with_dataframe(ws_to, df_origin)
-
-    # タイムスタンプ
-    cell = ws_to.range(1,1,1,1)
-    cell[0].value = str(dt.now(pytz.timezone('Asia/Tokyo')))
-    ws_to.update_cells(cell)
-    
-    print(asp_name)
+update_sheet(key_list, name_to, df_origin)
 
 print("成果確認シート 完了")
 
@@ -108,9 +159,6 @@ print("成果確認シート 完了")
 # 
 ########################
 
-# シートキー
-key_02 = "1WORdOLMmZU-7xyEhtZUJbjwyKe_q1Ye47E30xSA4ZS4"
-
 key_list = [
     ["サルクルー ROAS 5月", "1c_OptSDdKnwPT2hCR5GeLx2zRN8XoBh0UIozH-dIuqw"],
     ["FORCE ROAS 5月", "1mkku6tfljMB8Eqhf-BO7FrREggMywUJXW3PakpgktTA"],
@@ -119,14 +167,14 @@ key_list = [
     ["アレテコ ROAS 5月", "1-gN3Zgot1hiG8V1po4247jS1a8FzG6k3ZK6QL4P2ow4"],
     ["ブリーチ ROAS 5月", "1X6rNJoFEaRttEaihhbwRm57T9Ho2FOumtvQCAhWZVyQ"],
     ["FA ROAS 5月", "1h5o5m3lynyufizEpQTf-fXbR1WoeutwZHJUN6V9AITs"],
-    ["クラン ROAS 5月", "1iKUNYXU9uwO35MplWyMh6Y4l7gEF78O7AQ2135WI7gk"],
     ["ナハト ROAS 5月", "1RRJDE6ZFrsAFl2UkQo5Tnrjg4QIXdSUXFgiSrgSN6FY"],
     ["エンジョイ ROAS 5月", "1UjXevYXR1vZTHHX1SvoTWyxP4mW2zvf0rLVAWjITm_E"],
-    ["無限 ROAS 5月", "1tTF5NOdqN5CCLoUAbC9qxXVPEFH8c2UdVwqGGRRUiE4"]
+    ["無限 ROAS 5月", "1tTF5NOdqN5CCLoUAbC9qxXVPEFH8c2UdVwqGGRRUiE4"],
+    ["ウィンクレス ROAS 5月", "1qNAMt-kJGVzo4Ie1Bwb85kGMkal9CYWdtnTIWbbMTmM"],
+    ["クラン ROAS 5月", "1iKUNYXU9uwO35MplWyMh6Y4l7gEF78O7AQ2135WI7gk"]
 ]
 
 # シート名
-name_02 = "22年5月"
 name_to = "集客表_当月"
 
 
@@ -138,28 +186,9 @@ ws_origin = wb_origin.worksheet(name_02)
 df_origin = pd.DataFrame(ws_origin.get_all_values()) # 元データ取得
 df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
 
-# コピー先にアクセス
-wb_origin = func.connect_gspread(key_02)
-ws_origin = wb_origin.worksheet(name_02)
 
 # ループにする
-for this_key in key_list:
-    asp_name = this_key[0]
-    key_to = this_key[1]
-
-    # ROAS管理シートにアクセス
-    wb_to = func.connect_gspread(key_to)
-    ws_to = wb_to.worksheet(name_to)
-
-    # まとめデータを貼り付け
-    set_with_dataframe(ws_to, df_origin)
-
-    # タイムスタンプ
-    cell = ws_to.range(1,1,1,1)
-    cell[0].value = str(dt.now(pytz.timezone('Asia/Tokyo')))
-    ws_to.update_cells(cell)
-    
-    print(asp_name)
+update_sheet(key_list, name_to, df_origin)
 
 print("成果確認シート 完了")
 
