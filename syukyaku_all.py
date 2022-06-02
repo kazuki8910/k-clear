@@ -40,7 +40,7 @@ print("モジュールのインポート完了")
 # シートキー
 key_02 = "1WORdOLMmZU-7xyEhtZUJbjwyKe_q1Ye47E30xSA4ZS4"
 # シート名
-name_02 = "22年5月"
+name_02 = "22年6月"
 
 # 成果シートを更新するループの関数
 def update_sheet(key_list, name_to, df_origin):
@@ -113,26 +113,25 @@ print("成果更新シート 完了")
 ########################
 
 key_list = [
-    ["フォースリー 成果 5月", "15Jn-q4G5060iDOII7EW8_zhDdWfwFHB3oWwQRMfanqs"],
-    ["リンクエッジ 成果 5月", "1fsu-uILuZ7Y72GGX86dwmrJgXi20ZOQmWyftqIPRuco"],
-    ["サルクルー 成果 5月", "1G5kxK7lmHHZJTP29N9ApRQV4TJoYT2RaVltMK_Wldew"],
-    ["FORCE 成果 5月", "11nQNMGIzlfX8KM-jreCwnrjqdsAUfUliHgrwqdHIG4o"],
-    ["レントラ（FA） 成果 5月", "1AjAHRleLKcHRWKnN1E77_NbBGsCmOIs3jLLAps4iwQE"],
-    ["セレス 成果 5月", "1YwE-Hdx058OEkhHjovjal0ScKEJNWOIFEBtR-qoIyWA"],
-    ["ブランディングエンジニア 成果 5月", "1huUp9ASQCPD5mnOYcrn5XcJzKVvCaQnUr3o7guNhcNU"],
-    ["パフォテク 成果 5月", "1lENLjIfu49QANCQUNVmaB7A9Cd2Ha--nwnM4P2oh2yk"],
-    ["アレテコ 成果 5月", "1h-eKxkFgKjbtU4zSZ27w_qX5xB2I43to0wyFmNXQ_x0"],
-    ["ブリーチ 成果 5月", "1dlyj0kda6GpvNWLCpHPEU1h0kkMGSvE9798uVz_ibfk"],
-    ["FA 成果 5月", "1f6DAv8sFpUio8ougLu4Sm_exrJV9D_0kF75dUbKqqEo"],
-    ["クラン 成果 5月", "1yyNXq88-XQROgeQdt6LtEy5UretavethE1Q-mqgk_sQ"],
-    ["クリエイト 成果 5月", "19aeLHkG6XxNKRQZD1yFnlRMtesdVWhjvKcEEB2xQJAk"],
-    ["YouTuber 成果 5月", "1QTyMDuGh9Z59kxYU4jO8Oahofq7EyJSUoj8dk_tT0-E"],
-    ["h1 成果 5月", "1pGgPvqZc2WSnUw0ZCcQHGvI8xciumtVopoYYaYzUhFY"],
-    ["h3 成果 5月", "1yNs3crJD4-HlSG7bhpv0SQGlXncPZPOxmpb3jR4BSCg"]
+    ["フォースリー 成果 6月", "15Jn-q4G5060iDOII7EW8_zhDdWfwFHB3oWwQRMfanqs"],
+    ["リンクエッジ 成果 6月", "1fsu-uILuZ7Y72GGX86dwmrJgXi20ZOQmWyftqIPRuco"],
+    ["サルクルー 成果 6月", "1G5kxK7lmHHZJTP29N9ApRQV4TJoYT2RaVltMK_Wldew"],
+    ["FORCE 成果 6月", "11nQNMGIzlfX8KM-jreCwnrjqdsAUfUliHgrwqdHIG4o"],
+    ["レントラ（FA） 成果 6月", "1AjAHRleLKcHRWKnN1E77_NbBGsCmOIs3jLLAps4iwQE"],
+    ["セレス 成果 6月", "1YwE-Hdx058OEkhHjovjal0ScKEJNWOIFEBtR-qoIyWA"],
+    ["ブランディングエンジニア 成果 6月", "1huUp9ASQCPD5mnOYcrn5XcJzKVvCaQnUr3o7guNhcNU"],
+    ["パフォテク 成果 6月", "1lENLjIfu49QANCQUNVmaB7A9Cd2Ha--nwnM4P2oh2yk"],
+    ["アレテコ 成果 6月", "1h-eKxkFgKjbtU4zSZ27w_qX5xB2I43to0wyFmNXQ_x0"],
+    ["ブリーチ 成果 6月", "1dlyj0kda6GpvNWLCpHPEU1h0kkMGSvE9798uVz_ibfk"],
+    ["FA 成果 6月", "1f6DAv8sFpUio8ougLu4Sm_exrJV9D_0kF75dUbKqqEo"],
+    ["クラン 成果 6月", "1yyNXq88-XQROgeQdt6LtEy5UretavethE1Q-mqgk_sQ"],
+    ["クリエイト 成果 6月", "19aeLHkG6XxNKRQZD1yFnlRMtesdVWhjvKcEEB2xQJAk"],
+    ["h1 成果 6月", "1pGgPvqZc2WSnUw0ZCcQHGvI8xciumtVopoYYaYzUhFY"],
+    ["h3 成果 6月", "1yNs3crJD4-HlSG7bhpv0SQGlXncPZPOxmpb3jR4BSCg"]
 ]
 
 # シート名
-name_to = "まとめデータ_22年5月"
+name_to = "まとめデータ_22年6月"
 
 
 # 集客表元データのシートにアクセス
@@ -160,18 +159,15 @@ print("成果確認シート 完了")
 ########################
 
 key_list = [
-    ["サルクルー ROAS 5月", "1c_OptSDdKnwPT2hCR5GeLx2zRN8XoBh0UIozH-dIuqw"],
-    ["FORCE ROAS 5月", "1mkku6tfljMB8Eqhf-BO7FrREggMywUJXW3PakpgktTA"],
-    ["セレス ROAS 5月", "1Cyco-l3AOUdMGU28KNI5lDhqLnyq4uzSWYY9_U7qRCE"],
-    ["パフォテク ROAS 5月", "1ym1zIV-_ZFkNeCDS2JxvmOq8kbsQAvK-eTfyRYKSdVQ"],
-    ["アレテコ ROAS 5月", "1-gN3Zgot1hiG8V1po4247jS1a8FzG6k3ZK6QL4P2ow4"],
-    ["ブリーチ ROAS 5月", "1X6rNJoFEaRttEaihhbwRm57T9Ho2FOumtvQCAhWZVyQ"],
-    ["FA ROAS 5月", "1h5o5m3lynyufizEpQTf-fXbR1WoeutwZHJUN6V9AITs"],
-    ["ナハト ROAS 5月", "1RRJDE6ZFrsAFl2UkQo5Tnrjg4QIXdSUXFgiSrgSN6FY"],
-    ["エンジョイ ROAS 5月", "1UjXevYXR1vZTHHX1SvoTWyxP4mW2zvf0rLVAWjITm_E"],
-    ["無限 ROAS 5月", "1tTF5NOdqN5CCLoUAbC9qxXVPEFH8c2UdVwqGGRRUiE4"],
-    ["ウィンクレス ROAS 5月", "1qNAMt-kJGVzo4Ie1Bwb85kGMkal9CYWdtnTIWbbMTmM"],
-    ["クラン ROAS 5月", "1iKUNYXU9uwO35MplWyMh6Y4l7gEF78O7AQ2135WI7gk"]
+    ["FORCE ROAS 6月", "1ksJdBJ4q7H6UyjaO_2EvnxIqv4wGzIVKfDnfLEdxhDA"],
+    ["セレス ROAS 6月", "1CeNbPf0cyF8baBknIuEeGUqEv8Namt4xUuOmhkyB1zQ"],
+    ["パフォテク ROAS 6月", "1YMTBcjjMlhJCm7e3yD4l_opsiDzVbBz66ChyWRy1lTQ"],
+    ["アレテコ ROAS 6月", "1R8W8fhSsjKgxh_TKsk-Vwsk2Mff1Gg6bADCb7gVzW5s"],
+    ["ナハト ROAS 6月", "1RnlvVXbeIJCoo_HoMMAaQtyixdZ7-afmMTGEXqUtO4M"],
+    ["エンジョイ ROAS 6月", "1bIcvd2H07OvOTgpO4wDZ0rwXwbVq2f3hEXp_Ig0bNTY"],
+    ["無限 ROAS 6月", "1hGU-MxujS_hDN0pcrQL5iYQdhAITO72_sYl5sRCSp-0"],
+    ["ウィンクレス ROAS 6月", "14t5-pW-2lJ_nEW4mlCagct-B8MxjZm_lFxmMMEF67BM"],
+    ["クラン ROAS 6月", "1PkcqfaWlZufXuS6j1iyfBj827zNfQ4KopqjQclTP75E"]
 ]
 
 # シート名
