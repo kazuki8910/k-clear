@@ -5,6 +5,16 @@
 ・seika_quoriza：クオリザデータ取り込み
 ・syukyaku：集客表データ取り込み
 
+◆ファイルの更新方法
+・GitHubに更新
+    git add .
+    git commit -m "コメント"
+    git push origin master
+・herokuにアップ
+    git push heroku master
+
+
+
 
 ◆Chromeのバージョン
 Windows：97.0.4692.71

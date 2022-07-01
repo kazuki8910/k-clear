@@ -40,7 +40,7 @@ print("モジュールのインポート完了")
 # シートキー
 key_02 = "1WORdOLMmZU-7xyEhtZUJbjwyKe_q1Ye47E30xSA4ZS4"
 # シート名
-name_02 = "22年6月"
+name_02 = "22年7月"
 
 # 成果シートを更新するループの関数
 def update_sheet(key_list, name_to, df_origin):
@@ -113,25 +113,25 @@ print("成果更新シート 完了")
 ########################
 
 key_list = [
-    ["フォースリー 成果 6月", "15Jn-q4G5060iDOII7EW8_zhDdWfwFHB3oWwQRMfanqs"],
-    ["リンクエッジ 成果 6月", "1fsu-uILuZ7Y72GGX86dwmrJgXi20ZOQmWyftqIPRuco"],
-    ["サルクルー 成果 6月", "1G5kxK7lmHHZJTP29N9ApRQV4TJoYT2RaVltMK_Wldew"],
-    ["FORCE 成果 6月", "11nQNMGIzlfX8KM-jreCwnrjqdsAUfUliHgrwqdHIG4o"],
-    ["レントラ（FA） 成果 6月", "1AjAHRleLKcHRWKnN1E77_NbBGsCmOIs3jLLAps4iwQE"],
-    ["セレス 成果 6月", "1YwE-Hdx058OEkhHjovjal0ScKEJNWOIFEBtR-qoIyWA"],
-    ["ブランディングエンジニア 成果 6月", "1huUp9ASQCPD5mnOYcrn5XcJzKVvCaQnUr3o7guNhcNU"],
-    ["パフォテク 成果 6月", "1lENLjIfu49QANCQUNVmaB7A9Cd2Ha--nwnM4P2oh2yk"],
-    ["アレテコ 成果 6月", "1h-eKxkFgKjbtU4zSZ27w_qX5xB2I43to0wyFmNXQ_x0"],
-    ["ブリーチ 成果 6月", "1dlyj0kda6GpvNWLCpHPEU1h0kkMGSvE9798uVz_ibfk"],
-    ["FA 成果 6月", "1f6DAv8sFpUio8ougLu4Sm_exrJV9D_0kF75dUbKqqEo"],
-    ["クラン 成果 6月", "1yyNXq88-XQROgeQdt6LtEy5UretavethE1Q-mqgk_sQ"],
-    ["クリエイト 成果 6月", "19aeLHkG6XxNKRQZD1yFnlRMtesdVWhjvKcEEB2xQJAk"],
-    ["h1 成果 6月", "1pGgPvqZc2WSnUw0ZCcQHGvI8xciumtVopoYYaYzUhFY"],
-    ["h3 成果 6月", "1yNs3crJD4-HlSG7bhpv0SQGlXncPZPOxmpb3jR4BSCg"]
+    ["フォースリー 成果 7月", "1p-NEAiD3uHUp-Gcvzi6bm8LF9NJYDQ5Ju24HwOS8UYU"],
+    ["リンクエッジ 成果 7月", "1XbV5cgwkc6VuXlCUOSviqE4IdkbpyDxqug88089POfE"],
+    ["サルクルー 成果 7月", "1MBz8_qw20tFHbphiysOv0paqkVq9b5WL3GHVvbm3fDc"],
+    ["FORCE 成果 7月", "1SqjCFNE-gn_5feLbXx3iqnsWSR4e8RQtsfj3mkOlYTk"],
+    ["レントラ（FA） 成果 7月", "1DCYAWHVnZd3KtvP25QwdAi6gbOQA4FIN1kYpW6pRS6M"],
+    ["セレス 成果 7月", "1WqTDLkMwHbSu5mnNZgJRjShaXqM6LC3Fi9ItPJdwxdI"],
+    ["ブランディングエンジニア 成果 7月", "1RphlXXMpsnw9s7ovTzg96-qCBO7nF1-AwKh3xiHNix8"],
+    ["パフォテク 成果 7月", "1KonsyJpx7MUJKdlt-d41xHMuVt2YbPRGJH_jzAgScsM"],
+    ["アレテコ 成果 7月", "1d6mU8C7i3pFacOJrcgQfczZugHYe-B1pSjjYBDSWvyY"],
+    ["ブリーチ 成果 7月", "1FsQAKFfPHTBsOM4s99eldTwb5LtnzQd2cibYEg_X1H4"],
+    ["FA 成果 7月", "1L0DJRvcvu8x58nz0MWMB5Pu-JMrbk7D4RE3ep-ALioo"],
+    ["クラン 成果 7月", "14GhIRCLUQWB-oPX3unXwyaqErJEOPEPwaHuhOAZwFIU"],
+    ["クリエイト 成果 7月", "1BlStxYGDdMLrOZSfAqPzPpP4htbizGMEw6fy6_Ri6yw"],
+    ["h1 成果 7月", "1-eU5PeNBNXqIONfIRZxJErxItERh6DhVlrx-9IewPhI"],
+    ["h3 成果 7月", "1_JWsy811ICtYojOoVw_wm5lHLnpfXh0n8_r-zoIza3E"]
 ]
 
 # シート名
-name_to = "まとめデータ_22年6月"
+name_to = "まとめデータ_22年7月"
 
 
 # 集客表元データのシートにアクセス
@@ -159,15 +159,10 @@ print("成果確認シート 完了")
 ########################
 
 key_list = [
-    ["FORCE ROAS 6月", "1ksJdBJ4q7H6UyjaO_2EvnxIqv4wGzIVKfDnfLEdxhDA"],
-    ["セレス ROAS 6月", "1CeNbPf0cyF8baBknIuEeGUqEv8Namt4xUuOmhkyB1zQ"],
-    ["パフォテク ROAS 6月", "1YMTBcjjMlhJCm7e3yD4l_opsiDzVbBz66ChyWRy1lTQ"],
-    ["アレテコ ROAS 6月", "1R8W8fhSsjKgxh_TKsk-Vwsk2Mff1Gg6bADCb7gVzW5s"],
-    ["ナハト ROAS 6月", "1RnlvVXbeIJCoo_HoMMAaQtyixdZ7-afmMTGEXqUtO4M"],
-    ["エンジョイ ROAS 6月", "1bIcvd2H07OvOTgpO4wDZ0rwXwbVq2f3hEXp_Ig0bNTY"],
-    ["無限 ROAS 6月", "1hGU-MxujS_hDN0pcrQL5iYQdhAITO72_sYl5sRCSp-0"],
-    ["ウィンクレス ROAS 6月", "14t5-pW-2lJ_nEW4mlCagct-B8MxjZm_lFxmMMEF67BM"],
-    ["クラン ROAS 6月", "1PkcqfaWlZufXuS6j1iyfBj827zNfQ4KopqjQclTP75E"]
+    ["FORCE ROAS 7月", "1AXIhXCbKlzqFlS2cVaoiq0-H6bgIvtenB3lcZWsyTOA"],
+    ["セレス ROAS 7月", "1Lpd8Orw8M2VlHAaEIuqqwGlwBtSSDnDa7tOo9o-zogM"],
+    ["アレテコ ROAS 7月", "1rchXp8iuNTj6pyYCivK0_nC5a0V38GWXJNMJ4QhJxoE"],
+    ["クラン ROAS 7月", "18s2UpmJ5z0EyMxepWVOZ7gDnQ8y5SOBF9Sma3P8Enws"]
 ]
 
 # シート名
