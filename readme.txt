@@ -12,6 +12,9 @@
     git push origin master
 ・herokuにアップ
     git push heroku master
+    →エラーが起きたら heroku login でログインし直す
+・herokuでの動作確認
+    heroku run python syukyaku_all.py
 
 
 
