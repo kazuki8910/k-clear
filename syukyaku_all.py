@@ -179,6 +179,11 @@ if(this_month == applicable_month):
 
     os.remove(csv_filepass)
 
+    print("クランの基幹タブ更新完了")
+
+else:
+    print("月を跨いだので設定を更新してください")
+
 
 
 
