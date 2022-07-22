@@ -275,6 +275,7 @@ key_list = [
     ["FORCE ROAS 7月", "1AXIhXCbKlzqFlS2cVaoiq0-H6bgIvtenB3lcZWsyTOA"],
     ["セレス ROAS 7月", "1Lpd8Orw8M2VlHAaEIuqqwGlwBtSSDnDa7tOo9o-zogM"],
     ["アレテコ ROAS 7月", "1rchXp8iuNTj6pyYCivK0_nC5a0V38GWXJNMJ4QhJxoE"],
+    ["ナハト ROAS 7月", "1ku5PsC6pw8syP-8kaQ8xjQDbdsujs6nXfl6DrhtoDeo"],
     ["クラン ROAS 7月", "18s2UpmJ5z0EyMxepWVOZ7gDnQ8y5SOBF9Sma3P8Enws"]
 ]
 
