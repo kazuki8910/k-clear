@@ -15,7 +15,13 @@
 ########################
 
 # 該当月
-applicable_month = 7
+applicable_month = 8
+
+# 02シートのタブ名
+name_02 = "22年8月"
+
+# 更新するシート名
+name_to = "まとめデータ_22年8月"
 
 
 
@@ -56,8 +62,6 @@ print("モジュールのインポート完了")
 
 # シートキー
 key_02 = "1WORdOLMmZU-7xyEhtZUJbjwyKe_q1Ye47E30xSA4ZS4"
-# シート名
-name_02 = "22年7月"
 
 # 成果シートを更新するループの関数
 def update_sheet(key_list, name_to, df_origin):
@@ -116,7 +120,7 @@ this_month = dt.today().month
 #########################
 if(this_month == applicable_month):
 
-    # クローム軌道
+    # クローム起動
     drive = func.start_chrome()
 
     #########################
@@ -179,6 +183,8 @@ if(this_month == applicable_month):
 
     os.remove(csv_filepass)
 
+    drive.quit()
+
     print("クランの基幹タブ更新完了")
 
 else:
@@ -190,61 +196,27 @@ else:
 
 ########################
 # 
-# 成果更新シートのまとめデータ更新
-# 
-########################
-
-key_list = [
-    ["成果更新シート", "1mrktRFIhx9ASA7nyVVsecAuUMNxRPKV0d54SNxDSImM"]
-]
-
-name_to = "まとめデータ"
-
-
-# 集客表元データのシートにアクセス
-wb_origin = func.connect_gspread(key_02)
-ws_origin = wb_origin.worksheet(name_02)
-
-# 元データ取得
-df_origin = pd.DataFrame(ws_origin.get_all_values()) # 元データ取得
-df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
-
-# ループにする
-update_sheet(key_list, name_to, df_origin)
-
-
-print("成果更新シート 完了")
-
-
-# In[3]:
-
-
-########################
-# 
 # 成果確認シートの集客表タブ更新
 # 
 ########################
 
 key_list = [
-    ["フォースリー 成果 7月", "1p-NEAiD3uHUp-Gcvzi6bm8LF9NJYDQ5Ju24HwOS8UYU"],
-    ["リンクエッジ 成果 7月", "1XbV5cgwkc6VuXlCUOSviqE4IdkbpyDxqug88089POfE"],
-    ["サルクルー 成果 7月", "1MBz8_qw20tFHbphiysOv0paqkVq9b5WL3GHVvbm3fDc"],
-    ["FORCE 成果 7月", "1SqjCFNE-gn_5feLbXx3iqnsWSR4e8RQtsfj3mkOlYTk"],
-    ["レントラ（FA） 成果 7月", "1DCYAWHVnZd3KtvP25QwdAi6gbOQA4FIN1kYpW6pRS6M"],
-    ["セレス 成果 7月", "1WqTDLkMwHbSu5mnNZgJRjShaXqM6LC3Fi9ItPJdwxdI"],
-    ["ブランディングエンジニア 成果 7月", "1RphlXXMpsnw9s7ovTzg96-qCBO7nF1-AwKh3xiHNix8"],
-    ["パフォテク 成果 7月", "1KonsyJpx7MUJKdlt-d41xHMuVt2YbPRGJH_jzAgScsM"],
-    ["アレテコ 成果 7月", "1d6mU8C7i3pFacOJrcgQfczZugHYe-B1pSjjYBDSWvyY"],
-    ["ブリーチ 成果 7月", "1FsQAKFfPHTBsOM4s99eldTwb5LtnzQd2cibYEg_X1H4"],
-    ["FA 成果 7月", "1L0DJRvcvu8x58nz0MWMB5Pu-JMrbk7D4RE3ep-ALioo"],
-    ["クラン 成果 7月", "14GhIRCLUQWB-oPX3unXwyaqErJEOPEPwaHuhOAZwFIU"],
-    ["クリエイト 成果 7月", "1BlStxYGDdMLrOZSfAqPzPpP4htbizGMEw6fy6_Ri6yw"],
-    ["h1 成果 7月", "1-eU5PeNBNXqIONfIRZxJErxItERh6DhVlrx-9IewPhI"],
-    ["h3 成果 7月", "1_JWsy811ICtYojOoVw_wm5lHLnpfXh0n8_r-zoIza3E"]
+    ["フォースリー 成果", "1p-NEAiD3uHUp-Gcvzi6bm8LF9NJYDQ5Ju24HwOS8UYU"],
+    ["リンクエッジ 成果", "1XbV5cgwkc6VuXlCUOSviqE4IdkbpyDxqug88089POfE"],
+    # ["サルクルー 成果", ""],
+    ["FORCE 成果", "1SqjCFNE-gn_5feLbXx3iqnsWSR4e8RQtsfj3mkOlYTk"],
+    # ["レントラ（FA） 成果", ""],
+    ["セレス 成果", "1WqTDLkMwHbSu5mnNZgJRjShaXqM6LC3Fi9ItPJdwxdI"],
+    # ["ブランディングエンジニア 成果", ""],
+    # ["パフォテク 成果", ""],
+    ["アレテコ 成果", "1d6mU8C7i3pFacOJrcgQfczZugHYe-B1pSjjYBDSWvyY"],
+    # ["ブリーチ 成果", ""],
+    ["FA 成果", "1L0DJRvcvu8x58nz0MWMB5Pu-JMrbk7D4RE3ep-ALioo"],
+    ["ナハト（クラン） 成果", "14GhIRCLUQWB-oPX3unXwyaqErJEOPEPwaHuhOAZwFIU"],
+    # ["クリエイト 成果", ""],
+    ["h1 成果", "1-eU5PeNBNXqIONfIRZxJErxItERh6DhVlrx-9IewPhI"],
+    ["h3 成果", "1_JWsy811ICtYojOoVw_wm5lHLnpfXh0n8_r-zoIza3E"]
 ]
-
-# シート名
-name_to = "まとめデータ_22年7月"
 
 
 # 集客表元データのシートにアクセス
@@ -272,11 +244,9 @@ print("成果確認シート 完了")
 ########################
 
 key_list = [
-    ["FORCE ROAS 7月", "1AXIhXCbKlzqFlS2cVaoiq0-H6bgIvtenB3lcZWsyTOA"],
-    ["セレス ROAS 7月", "1Lpd8Orw8M2VlHAaEIuqqwGlwBtSSDnDa7tOo9o-zogM"],
-    ["アレテコ ROAS 7月", "1rchXp8iuNTj6pyYCivK0_nC5a0V38GWXJNMJ4QhJxoE"],
-    ["ナハト ROAS 7月", "1ku5PsC6pw8syP-8kaQ8xjQDbdsujs6nXfl6DrhtoDeo"],
-    ["クラン ROAS 7月", "18s2UpmJ5z0EyMxepWVOZ7gDnQ8y5SOBF9Sma3P8Enws"]
+    ["FORCE ROAS", "1Tb0PdBZgMgn1jkvbSkUvEIscOZCizDMjWzOVS31a6gc"],
+    ["アレテコ ROAS", "1YFoqAcfTDYUt2FlsWf2trNDLxIUxu-qPEJBRocLwLrc"],
+    ["ナハト(クラン) ROAS", "1RxeKMDWZlxoalKCG7Ssin7q9haf4O9NmeFsQlmkgemw"]
 ]
 
 # シート名
@@ -295,5 +265,5 @@ df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
 # ループにする
 update_sheet(key_list, name_to, df_origin)
 
-print("成果確認シート 完了")
+print("ROAS確認シート 完了")
 
