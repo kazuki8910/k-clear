@@ -164,7 +164,7 @@ if(this_month == applicable_month):
     #########################
 
     # クラン ROAS管理シートキー
-    sheet_key = "18s2UpmJ5z0EyMxepWVOZ7gDnQ8y5SOBF9Sma3P8Enws"
+    sheet_key = "1RxeKMDWZlxoalKCG7Ssin7q9haf4O9NmeFsQlmkgemw"
 
     # シートにアクセス
     wb = func.connect_gspread(sheet_key)
