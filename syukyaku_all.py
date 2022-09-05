@@ -15,13 +15,13 @@
 ########################
 
 # 該当月
-applicable_month = 8
+applicable_month = 9
 
 # 02シートのタブ名
-name_02 = "22年8月"
+name_02 = "22年9月"
 
 # 更新するシート名
-name_to = "まとめデータ_22年8月"
+name_to = "まとめデータ_22年9月"
 
 
 
@@ -61,7 +61,7 @@ print("モジュールのインポート完了")
 ########################
 
 # シートキー
-key_02 = "1WORdOLMmZU-7xyEhtZUJbjwyKe_q1Ye47E30xSA4ZS4"
+key_02 = "1UvGMEFNqhRE-YfuYV1nwhKUb3YWCqRHRttwCGwXZO3g"
 
 # 成果シートを更新するループの関数
 def update_sheet(key_list, name_to, df_origin):
@@ -164,7 +164,7 @@ if(this_month == applicable_month):
     #########################
 
     # クラン ROAS管理シートキー
-    sheet_key = "1RxeKMDWZlxoalKCG7Ssin7q9haf4O9NmeFsQlmkgemw"
+    sheet_key = "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"
 
     # シートにアクセス
     wb = func.connect_gspread(sheet_key)
@@ -245,8 +245,6 @@ print("成果確認シート 完了")
 ########################
 
 key_list = [
-    ["FORCE ROAS", "1Tb0PdBZgMgn1jkvbSkUvEIscOZCizDMjWzOVS31a6gc"],
-    ["アレテコ ROAS", "1YFoqAcfTDYUt2FlsWf2trNDLxIUxu-qPEJBRocLwLrc"],
     ["ナハト(クラン) ROAS", "1RxeKMDWZlxoalKCG7Ssin7q9haf4O9NmeFsQlmkgemw"]
 ]
 
