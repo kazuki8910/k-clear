@@ -245,7 +245,7 @@ print("成果確認シート 完了")
 ########################
 
 key_list = [
-    ["ナハト(クラン) ROAS", "1RxeKMDWZlxoalKCG7Ssin7q9haf4O9NmeFsQlmkgemw"]
+    ["ナハト(クラン) ROAS", "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"]
 ]
 
 # シート名
