@@ -163,32 +163,37 @@ if(this_month == applicable_month):
     # スプシにアップロード
     #########################
 
-    # クラン ROAS管理シートキー
-    sheet_key = "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"
+    sheet_list = [
+        ["ナハト", "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"],
+        ["FORCE", "14y7HgWRLCLN-6rTQUVSgkXi-D6Pb0Pwtn4eYH26hlFk"]
+    ]
+    for this_sheet in sheet_list:
+        sheet_name = this_sheet[0]
+        sheet_key = this_sheet[1]
 
-    # シートにアクセス
-    wb = func.connect_gspread(sheet_key)
+        # シートにアクセス
+        wb = func.connect_gspread(sheet_key)
 
-    # CSVをアップロード
-    wb.values_update(
-        '基幹_当月',
-        params={'valueInputOption': 'USER_ENTERED'},
-        body={'values': list(csv.reader(open(csv_filepass, encoding='cp932')))}
-    )
-    time.sleep(3)
-
-    #########################
-    # CSVファイルを削除
-    #########################
-
-    os.remove(csv_filepass)
-
-    drive.quit()
-
-    print("クランの基幹タブ更新完了")
+        # CSVをアップロード
+        wb.values_update(
+            '基幹_当月',
+            params={'valueInputOption': 'USER_ENTERED'},
+            body={'values': list(csv.reader(open(csv_filepass, encoding='cp932')))}
+        )
+        time.sleep(3)
 
 else:
     print("月を跨いだので設定を更新してください")
+
+#########################
+# CSVファイルを削除
+#########################
+
+os.remove(csv_filepass)
+
+drive.quit()
+
+print(f'{sheet_name} 基幹更新完了')
 
 
 
@@ -245,7 +250,8 @@ print("成果確認シート 完了")
 ########################
 
 key_list = [
-    ["ナハト(クラン) ROAS", "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"]
+    ["ナハト(クラン) ROAS", "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"],
+    ["FORCE ROAS", "14y7HgWRLCLN-6rTQUVSgkXi-D6Pb0Pwtn4eYH26hlFk"],
 ]
 
 # シート名
