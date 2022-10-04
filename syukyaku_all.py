@@ -15,15 +15,42 @@
 ########################
 
 # 該当月
-applicable_month = 9
+applicable_month = 10
 
 # 02シートのタブ名
-name_02 = "22年9月"
+name_02 = "22年10月"
 
 # 更新するシート名
-name_to = "まとめデータ_22年9月"
+name_to = "まとめデータ_22年10月"
 
 
+# 02シートのキー
+key_02 = "12scEVE_dHMrrng8g5bq0McvihQkVhTRkoOeDm7i5aV4"
+
+# ROAS管理シートのキー
+key_list_roas = [
+    ["ナハト", "1JWYO96W27mWuQs4Xr-9yXz1B-JA5-uo4z6_ougf_Yi8"]
+]
+
+# 成果確認シートのキー
+key_list_seika = [
+    ["フォースリー 成果", "1sf6uWbPFSjmTkyagLZD_DCSWR1lGfij3V9TjfXxbnqg"],
+    ["リンクエッジ 成果", "1KpSLnbKHHutWizb9qldIJl7-Q943PkAolubjAXED8oU"],
+    # ["サルクルー 成果", ""],
+    ["FORCE(レントラ) 成果", "1v-o4RwUEUVvLiPnyo4nhWpnb9n826SlhQovkHIjljGw"],
+    # ["レントラ（FA） 成果", ""],
+    ["セレス 成果", "153vDemv8gQM0Vyy3XLEcajVLnnYRZa5fFb0xyWVXSCA"],
+    # ["ブランディングエンジニア 成果", ""],
+    # ["パフォテク 成果", ""],
+    ["アレテコ 成果", "17tndahR_B9XscWh_eE2orJPLZbGi32rILQoSLPD0oA0"],
+    # ["ブリーチ 成果", ""],
+    ["FA 成果", "1SswfIyB-5tRaqEZlOXMzJ1L7PdFkAW-lqzBRelPdGvs"],
+    ["ナハト（クラン） 成果", "1IZiwYxSucjl-BAN3vV3F_P0-suJ1s0xXM2kcOrNWsQc"],
+    ["FORCE 成果", "1MHbIdekPMUJV5g8dHVyFyfmaJF3XggAxDd3Mvd2arzE"],
+    # ["クリエイト 成果", ""],
+    ["h1 成果", "1-eU5PeNBNXqIONfIRZxJErxItERh6DhVlrx-9IewPhI"],
+    ["h3 成果", "1_JWsy811ICtYojOoVw_wm5lHLnpfXh0n8_r-zoIza3E"]
+]
 
 
 ########################
@@ -60,12 +87,9 @@ print("モジュールのインポート完了")
 # 
 ########################
 
-# シートキー
-key_02 = "1UvGMEFNqhRE-YfuYV1nwhKUb3YWCqRHRttwCGwXZO3g"
-
 # 成果シートを更新するループの関数
-def update_sheet(key_list, name_to, df_origin):
-    for this_key in key_list:
+def update_sheet(key_list_seika, name_to, df_origin):
+    for this_key in key_list_seika:
         i=0
         while True:
             i=i+1
@@ -163,11 +187,7 @@ if(this_month == applicable_month):
     # スプシにアップロード
     #########################
 
-    sheet_list = [
-        ["ナハト", "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"],
-        ["FORCE", "14y7HgWRLCLN-6rTQUVSgkXi-D6Pb0Pwtn4eYH26hlFk"]
-    ]
-    for this_sheet in sheet_list:
+    for this_sheet in key_list_roas:
         sheet_name = this_sheet[0]
         sheet_key = this_sheet[1]
 
@@ -205,26 +225,6 @@ print(f'{sheet_name} 基幹更新完了')
 # 
 ########################
 
-key_list = [
-    ["フォースリー 成果", "1p-NEAiD3uHUp-Gcvzi6bm8LF9NJYDQ5Ju24HwOS8UYU"],
-    ["リンクエッジ 成果", "1XbV5cgwkc6VuXlCUOSviqE4IdkbpyDxqug88089POfE"],
-    # ["サルクルー 成果", ""],
-    ["FORCE 成果", "1SqjCFNE-gn_5feLbXx3iqnsWSR4e8RQtsfj3mkOlYTk"],
-    # ["レントラ（FA） 成果", ""],
-    ["セレス 成果", "1WqTDLkMwHbSu5mnNZgJRjShaXqM6LC3Fi9ItPJdwxdI"],
-    # ["ブランディングエンジニア 成果", ""],
-    # ["パフォテク 成果", ""],
-    ["アレテコ 成果", "1d6mU8C7i3pFacOJrcgQfczZugHYe-B1pSjjYBDSWvyY"],
-    # ["ブリーチ 成果", ""],
-    ["FA 成果", "1L0DJRvcvu8x58nz0MWMB5Pu-JMrbk7D4RE3ep-ALioo"],
-    ["ナハト（クラン） 成果", "14GhIRCLUQWB-oPX3unXwyaqErJEOPEPwaHuhOAZwFIU"],
-    ["FORCE 成果", "1S9rQlhBj_VjpAvFRJXbfoDKzQigFX0T7OvM39nBpKFM"],
-    # ["クリエイト 成果", ""],
-    ["h1 成果", "1-eU5PeNBNXqIONfIRZxJErxItERh6DhVlrx-9IewPhI"],
-    ["h3 成果", "1_JWsy811ICtYojOoVw_wm5lHLnpfXh0n8_r-zoIza3E"]
-]
-
-
 # 集客表元データのシートにアクセス
 wb_origin = func.connect_gspread(key_02)
 ws_origin = wb_origin.worksheet(name_02)
@@ -235,7 +235,7 @@ df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
 
 
 # ループにする
-update_sheet(key_list, name_to, df_origin)
+update_sheet(key_list_seika, name_to, df_origin)
 
 print("成果確認シート 完了")
 
@@ -248,11 +248,6 @@ print("成果確認シート 完了")
 # ROAS管理シートの集客表タブ更新
 # 
 ########################
-
-key_list = [
-    ["ナハト(クラン) ROAS", "1GiD6IFZhjhVe-y-DvEUoT0et6Qt_mYBRKF_tWGR5_z8"],
-    ["FORCE ROAS", "14y7HgWRLCLN-6rTQUVSgkXi-D6Pb0Pwtn4eYH26hlFk"],
-]
 
 # シート名
 name_to = "集客表_当月"
@@ -268,7 +263,7 @@ df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
 
 
 # ループにする
-update_sheet(key_list, name_to, df_origin)
+update_sheet(key_list_roas, name_to, df_origin)
 
 print("ROAS確認シート 完了")
 
