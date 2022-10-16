@@ -29,7 +29,8 @@ key_02 = "12scEVE_dHMrrng8g5bq0McvihQkVhTRkoOeDm7i5aV4"
 
 # ROAS管理シートのキー
 key_list_roas = [
-    ["ナハト", "1JWYO96W27mWuQs4Xr-9yXz1B-JA5-uo4z6_ougf_Yi8"]
+    ["ナハト", "1JWYO96W27mWuQs4Xr-9yXz1B-JA5-uo4z6_ougf_Yi8"],
+    ["FORCE", "1TfVRs9mmy7uCYWUF5EXeFEsZmnGzuJ3YXYi1GAEjEi8"]
 ]
 
 # 成果確認シートのキー
@@ -123,7 +124,7 @@ def update_sheet(key_list_seika, name_to, df_origin):
 
 ########################
 # 
-# クランの基幹タブ更新
+# 基幹タブ更新
 # 
 ########################
 ########################
