@@ -15,13 +15,13 @@
 ########################
 
 # 該当月
-applicable_month = 10
+applicable_month = 11
 
 # 02シートのタブ名
-name_02 = "22年10月"
+name_02 = "22年11月"
 
 # 更新するシート名
-name_to = "まとめデータ_22年10月"
+name_to = "まとめデータ_22年11月"
 
 
 # 02シートのキー
@@ -29,8 +29,8 @@ key_02 = "12scEVE_dHMrrng8g5bq0McvihQkVhTRkoOeDm7i5aV4"
 
 # ROAS管理シートのキー
 key_list_roas = [
-    ["ナハト", "1JWYO96W27mWuQs4Xr-9yXz1B-JA5-uo4z6_ougf_Yi8"],
-    ["FORCE", "1TfVRs9mmy7uCYWUF5EXeFEsZmnGzuJ3YXYi1GAEjEi8"]
+    ["ナハト", "1bgnVdhN8l6A5Pf80wZTg04ywLAPyrypRfou5Hdwh0Tk"],
+    ["FORCE", "1VMBBCaGYOhewcuteD_kv5akZf3M6erAs_mnHlCfhV0c"]
 ]
 
 # 成果確認シートのキー
