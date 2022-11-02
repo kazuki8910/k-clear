@@ -1,0 +1,7 @@
+herokuのseleniumのバージョンを合わせる方法
+・herokuで動作させたときの現在のブラウザのバージョンを確認
+  heroku run python 
+・適当なバージョンでchromedriver-binaryをpip installする
+  pip install chromedriver-binary==777
+・一番近いバージョンを確認して、requirements.txtにバージョンを記載
+・再度herokuにアップする
