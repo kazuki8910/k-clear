@@ -40,7 +40,7 @@ key_list_seika = [
     # ["サルクルー 成果", ""],
     ["FORCE(レントラ) 成果", "1v-o4RwUEUVvLiPnyo4nhWpnb9n826SlhQovkHIjljGw"],
     # ["レントラ（FA） 成果", ""],
-    ["セレス 成果", "153vDemv8gQM0Vyy3XLEcajVLnnYRZa5fFb0xyWVXSCA"],
+    # ["セレス 成果", "153vDemv8gQM0Vyy3XLEcajVLnnYRZa5fFb0xyWVXSCA"],
     # ["ブランディングエンジニア 成果", ""],
     # ["パフォテク 成果", ""],
     ["アレテコ 成果", "17tndahR_B9XscWh_eE2orJPLZbGi32rILQoSLPD0oA0"],
@@ -203,6 +203,8 @@ if(this_month == applicable_month):
         )
         time.sleep(3)
 
+        print(f'{sheet_name} 基幹更新完了')
+
 else:
     print("月を跨いだので設定を更新してください")
 
@@ -214,7 +216,7 @@ os.remove(csv_filepass)
 
 drive.quit()
 
-print(f'{sheet_name} 基幹更新完了')
+
 
 
 
