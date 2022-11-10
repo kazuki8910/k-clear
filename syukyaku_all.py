@@ -30,7 +30,9 @@ key_02 = "12scEVE_dHMrrng8g5bq0McvihQkVhTRkoOeDm7i5aV4"
 # ROAS管理シートのキー
 key_list_roas = [
     ["ナハト", "1bgnVdhN8l6A5Pf80wZTg04ywLAPyrypRfou5Hdwh0Tk"],
-    ["FORCE", "1VMBBCaGYOhewcuteD_kv5akZf3M6erAs_mnHlCfhV0c"]
+    ["FORCE", "1VMBBCaGYOhewcuteD_kv5akZf3M6erAs_mnHlCfhV0c"],
+    ["FA", "1VPaG4Kf6hmBecc-PqNfZu87JV9BN3TP0GVg2oUh3Q7o"],
+    ["フォースリー", "1PWwHHIBvWzS73X5MZrMA88OXpBrtcY979sALmWJJYOk"],
 ]
 
 # 成果確認シートのキー
@@ -50,6 +52,7 @@ key_list_seika = [
     ["FORCE 成果", "1MHbIdekPMUJV5g8dHVyFyfmaJF3XggAxDd3Mvd2arzE"],
     # ["クリエイト 成果", ""],
     ["h1 成果", "1-eU5PeNBNXqIONfIRZxJErxItERh6DhVlrx-9IewPhI"],
+    ["h1 LINE SEO", "17C982bsnzyCxcEWwBYsFZvUhqx4NQn_XkaBO7QOUjnQ"],
     ["h3 成果", "1_JWsy811ICtYojOoVw_wm5lHLnpfXh0n8_r-zoIza3E"]
 ]
 
