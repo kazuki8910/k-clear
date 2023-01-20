@@ -157,7 +157,7 @@ def start_chrome(headless=True):
     })
 
     # クローム起動
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(options=options, executable_path='driver/chromedriver.exe')
     driver.set_window_size(1280, 720)
     time.sleep(1)
     print("クローム起動")

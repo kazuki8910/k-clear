@@ -1,3 +1,7 @@
+【Chromeドライバーの更新】
+driverディレクトリのchromedriver.exeを更新する。
+参照記事：https://reffect.co.jp/python/selenium#chromedriver
+
 herokuのseleniumのバージョンを合わせる方法
 ・herokuで動作させたときの現在のブラウザのバージョンを確認
   heroku run python 

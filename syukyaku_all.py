@@ -15,45 +15,44 @@
 ########################
 
 # 該当月
-applicable_month = 11
+applicable_month = 1
 
 # 02シートのタブ名
-name_02 = "22年11月"
+name_02 = "23年1月"
 
 # 更新するシート名
-name_to = "まとめデータ_22年11月"
-
+name_to = "まとめデータ_23年1月"
 
 # 02シートのキー
-key_02 = "12scEVE_dHMrrng8g5bq0McvihQkVhTRkoOeDm7i5aV4"
+key_02 = "1rv1gIrocxGyeD71mhr3_gKfMbD24foEoWCOwVX2eR-8"
 
 # ROAS管理シートのキー
 key_list_roas = [
-    ["ナハト", "1bgnVdhN8l6A5Pf80wZTg04ywLAPyrypRfou5Hdwh0Tk"],
-    ["FORCE", "1VMBBCaGYOhewcuteD_kv5akZf3M6erAs_mnHlCfhV0c"],
-    ["FA", "1VPaG4Kf6hmBecc-PqNfZu87JV9BN3TP0GVg2oUh3Q7o"],
-    ["フォースリー", "1PWwHHIBvWzS73X5MZrMA88OXpBrtcY979sALmWJJYOk"],
+    ["フォースリー", "1HLf2S8f485cJZ5lbQJEUbhTyx9I5t94Cj9jp29JUlcA"],
+    ["FA", "1188aA2qg-MAAyfLaVaJj_LLfK7EdW90I5qQhdwUAZa8"],
+    ["ナハト", "157R3oGs7uYgtkm7AZo59dnwuIeIy8FRILCAJEWtR7Ls"],
+    ["FORCE", "1qzpsEhX5S2o5fRpFMZkkxZygxWbwegoTzckMxTzTPGI"],
 ]
 
 # 成果確認シートのキー
 key_list_seika = [
-    ["フォースリー 成果", "1sf6uWbPFSjmTkyagLZD_DCSWR1lGfij3V9TjfXxbnqg"],
-    ["リンクエッジ 成果", "1KpSLnbKHHutWizb9qldIJl7-Q943PkAolubjAXED8oU"],
+    # ["フォースリー 成果", "1sf6uWbPFSjmTkyagLZD_DCSWR1lGfij3V9TjfXxbnqg"],
+    # ["リンクエッジ 成果", "1KpSLnbKHHutWizb9qldIJl7-Q943PkAolubjAXED8oU"],
     # ["サルクルー 成果", ""],
-    ["FORCE(レントラ) 成果", "1v-o4RwUEUVvLiPnyo4nhWpnb9n826SlhQovkHIjljGw"],
+    # ["FORCE(レントラ) 成果", "1v-o4RwUEUVvLiPnyo4nhWpnb9n826SlhQovkHIjljGw"],
     # ["レントラ（FA） 成果", ""],
     # ["セレス 成果", "153vDemv8gQM0Vyy3XLEcajVLnnYRZa5fFb0xyWVXSCA"],
     # ["ブランディングエンジニア 成果", ""],
     # ["パフォテク 成果", ""],
-    ["アレテコ 成果", "17tndahR_B9XscWh_eE2orJPLZbGi32rILQoSLPD0oA0"],
+    # ["アレテコ 成果", "17tndahR_B9XscWh_eE2orJPLZbGi32rILQoSLPD0oA0"],
     # ["ブリーチ 成果", ""],
-    ["FA 成果", "1SswfIyB-5tRaqEZlOXMzJ1L7PdFkAW-lqzBRelPdGvs"],
-    ["ナハト（クラン） 成果", "1IZiwYxSucjl-BAN3vV3F_P0-suJ1s0xXM2kcOrNWsQc"],
-    ["FORCE 成果", "1MHbIdekPMUJV5g8dHVyFyfmaJF3XggAxDd3Mvd2arzE"],
+    # ["FA 成果", "1SswfIyB-5tRaqEZlOXMzJ1L7PdFkAW-lqzBRelPdGvs"],
+    # ["ナハト（クラン） 成果", "1IZiwYxSucjl-BAN3vV3F_P0-suJ1s0xXM2kcOrNWsQc"],
+    # ["FORCE 成果", "1MHbIdekPMUJV5g8dHVyFyfmaJF3XggAxDd3Mvd2arzE"],
     # ["クリエイト 成果", ""],
-    ["h1 成果", "1-eU5PeNBNXqIONfIRZxJErxItERh6DhVlrx-9IewPhI"],
-    ["h1 LINE SEO", "17C982bsnzyCxcEWwBYsFZvUhqx4NQn_XkaBO7QOUjnQ"],
-    ["h3 成果", "1_JWsy811ICtYojOoVw_wm5lHLnpfXh0n8_r-zoIza3E"]
+    ["h1 成果", "1bTjfbr3qnStfRKcDvXuD-V8KE5z-5L0GKlF8RVwLUqw"],
+    ["h1 LINE SEO", "142UZtsQ6N_Vp3m19x4oNLwgXeZW4pcDmeu5b9EJSe-I"],
+    ["h3 成果", "1jhUvxyI7GuqRyn3l0BFkRN-zJSeuw9Tb6w2dG1Ahn1I"]
 ]
 
 
@@ -208,16 +207,19 @@ if(this_month == applicable_month):
 
         print(f'{sheet_name} 基幹更新完了')
 
+    
+    #########################
+    # CSVファイルを削除
+    #########################
+
+    os.remove(csv_filepass)
+
+    drive.quit()
+
+
 else:
     print("月を跨いだので設定を更新してください")
 
-#########################
-# CSVファイルを削除
-#########################
-
-os.remove(csv_filepass)
-
-drive.quit()
 
 
 
