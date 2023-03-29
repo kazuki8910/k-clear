@@ -15,23 +15,25 @@
 ########################
 
 # 該当月
-applicable_month = 1
+applicable_month = 3
 
 # 02シートのタブ名
-name_02 = "23年1月"
+name_02 = "23年3月"
 
 # 更新するシート名
-name_to = "まとめデータ_23年1月"
+name_to = "まとめデータ_23年3月"
 
 # 02シートのキー
 key_02 = "1rv1gIrocxGyeD71mhr3_gKfMbD24foEoWCOwVX2eR-8"
 
 # ROAS管理シートのキー
 key_list_roas = [
-    ["フォースリー", "1HLf2S8f485cJZ5lbQJEUbhTyx9I5t94Cj9jp29JUlcA"],
-    ["FA", "1188aA2qg-MAAyfLaVaJj_LLfK7EdW90I5qQhdwUAZa8"],
-    ["ナハト", "157R3oGs7uYgtkm7AZo59dnwuIeIy8FRILCAJEWtR7Ls"],
-    ["FORCE", "1qzpsEhX5S2o5fRpFMZkkxZygxWbwegoTzckMxTzTPGI"],
+    ["フォースリー", "1lUVyHZet5mO5BCIgwuRU0mSuyZix9djZE6rkc_6SNMc"],
+    ["FA", "1HMb1GbEedC2gsFxdCe9wTVywc56sMNusEtLdleJkNVs"],
+    ["ナハト", "1tRVEecNNkkMC-SX0vfUenRrCHCvmYWxz2P0AR2YaJz4"],
+    ["FORCE", "12LiAIcVnQUBk2OLsBl_7lJ-sGmi93i6H0IXdBAabzQM"],
+    ["FORCE_新", "1oMzkSQnlKOFiLFvkIIBM7u0LsSoAab0fCJtgdFcNmwA"],
+    ["高年齢層", "10O4ue8G2ixyxNIf_uM9lg_a7usQjVp86uiIKkUOTfbk"],
 ]
 
 # 成果確認シートのキー
@@ -148,7 +150,7 @@ this_month = dt.today().month
 if(this_month == applicable_month):
 
     # クローム起動
-    drive = func.start_chrome()
+    drive = func.start_chrome(False)
 
     #########################
     # 基幹システムにログイン
@@ -274,4 +276,3 @@ df_origin = df_origin[df_origin[4] != ""]   # ID空白除去
 update_sheet(key_list_roas, name_to, df_origin)
 
 print("ROAS確認シート 完了")
-
