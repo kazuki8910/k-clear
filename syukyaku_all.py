@@ -184,7 +184,7 @@ if(this_month == applicable_month):
     time.sleep(3)
 
     # ダウンロードボタンをクリック
-    elm_dl_btn = drive.find_element(By.NAME, "commit")
+    elm_dl_btn = drive.find_elements(By.NAME, "commit")[1]
     elm_dl_btn.click()
     time.sleep(3)
 
